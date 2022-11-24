@@ -25,3 +25,4 @@ while(usrinput):
         print("Invalid choice")
         wait(0.5)
         print("Defaulting to file 'Rayloft'")
+        print("(Start play)")

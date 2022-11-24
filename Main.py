@@ -1,5 +1,6 @@
 from time import sleep
 usrinput = True
+
 print("""
 Welcome adventurer to the world of Rayloft:tm:!
 
@@ -12,8 +13,7 @@ Welcome adventurer to the world of Rayloft:tm:!
 sleep(1)
 while(usrinput):
     if input("Please choose an option\n>") == "1":
-        print(
-        """
+        print("""
 Please choose a file.
 
 1. Rayloft

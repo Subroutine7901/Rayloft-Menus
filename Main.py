@@ -8,12 +8,10 @@ while(True):
 3. Settings
 4. Input Code
 5. Quit
-    """)
-    usrinput = input("Please choose an option\n>")
-    sleep(1)
-    if usrinput == "1":
-        print("\nINVALID OPERATION")
-    elif usrinput == "2":
+""")
+sleep(1)
+while(usrinput):
+    if input("Please choose an option\n>") == "1":
         print("""
 Please choose a file.
 

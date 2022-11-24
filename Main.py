@@ -1,6 +1,4 @@
-from defs import *
-from time import wait
-
+from time import sleep
 usrinput = True
 print("""
 Welcome adventurer to the world of Rayloft:tm:!
@@ -11,18 +9,20 @@ Welcome adventurer to the world of Rayloft:tm:!
 4. Input Code
 5. Quit
 """)
-wait(1)
+sleep(1)
 while(usrinput):
-    if input("Please choose an option\n>") == 1:
-        print("""
-        Please choose a file.
+    if input("Please choose an option\n>") == "1":
+        print(
+        """
+Please choose a file.
 
-        1. Rayloft
-        2.
-        3.
+1. Rayloft
+2.
+3.
         """)
         input(">")
         print("Invalid choice")
-        wait(0.5)
+        sleep(0.5)
         print("Defaulting to file 'Rayloft'")
         print("(Start play)")
+        exit()

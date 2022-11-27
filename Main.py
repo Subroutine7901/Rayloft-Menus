@@ -1,4 +1,6 @@
 from time import sleep
+usedcodes = []
+codes = ["Demo", "Aelius", "Uglyorc", "Entrance128"]
 print("Welcome adventurer to the world of Rayloft™!")
 while(True):
     sleep(1)
@@ -10,10 +12,10 @@ while(True):
 5. Quit
 """)
     usrinput = input("Please choose an option\n>")
+    sleep(1)
     if usrinput == "1":
-        sleep(1)
         print("\nInvalid Option")
-    if usrinput == "2":
+    elif usrinput == "2":
         print("""
 Please choose a file.
 
@@ -26,6 +28,17 @@ Please choose a file.
         print("\nInvalid choice")
         sleep(1)
         print("\nDefaulting to file 'Rayloft'")
+        if usedcodes == []:
+            print("With no codes enabled.")
+        elif len(usedcodes) == 1:
+            print(f"With code '{usedcodes[0]}'")
+        else:
+            for i in usedcodes:
+                if len(i) == 1:
+                    outputstr = "".join(usedcodes)
+                else:
+                    outputstr = " and ".join([", ".join(usedcodes[:-1]), usedcodes[-1]])
+            print(f"With the following codes enabled: {outputstr}")
         print("(Start play)")
         sleep(1)
         exit()
@@ -42,9 +55,13 @@ Options:
         print("\nInvalid choice")
         sleep(1)
     elif usrinput == "4":
-        input("\nInput Code\n>")
+        usrinput = input("\nInput Code\n>").capitalize()
         sleep(1)
-        print("\nINVALID CODE")
+        if usrinput in codes:
+            usedcodes.append(usrinput) 
+            print("\nCode Correct!")
+        else:
+            print("\nINVALID CODE")
         sleep(1)
     elif usrinput == "5":
         print("\nGoodbye!\n")

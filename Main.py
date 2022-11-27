@@ -1,7 +1,7 @@
 from time import sleep
 print("Welcome adventurer to the world of Rayloft™!")
-sleep(1)
 while(True):
+    sleep(1)
     print("""
 1. New Game
 2. Load Game
@@ -9,9 +9,11 @@ while(True):
 4. Input Code
 5. Quit
 """)
-sleep(1)
-while(usrinput):
-    if input("Please choose an option\n>") == "1":
+    usrinput = input("Please choose an option\n>")
+    if usrinput == "1":
+        sleep(1)
+        print("\nInvalid Option")
+    if usrinput == "2":
         print("""
 Please choose a file.
 

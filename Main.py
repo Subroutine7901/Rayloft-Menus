@@ -30,8 +30,6 @@ Please choose a file.
         print("\nDefaulting to file 'Rayloft'")
         if usedcodes == []:
             print("With no codes enabled.")
-        elif len(usedcodes) == 1:
-            print(f"With code '{usedcodes[0]}'")
         else:
             for i in usedcodes:
                 if len(i) == 1:

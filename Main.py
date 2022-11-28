@@ -31,11 +31,7 @@ Please choose a file.
         if usedcodes == []:
             print("With no codes enabled.")
         else:
-            for i in usedcodes:
-                if len(i) == 1:
-                    outputstr = "".join(usedcodes)
-                else:
-                    outputstr = " and ".join([", ".join(usedcodes[:-1]), usedcodes[-1]])
+            outputstr = str(usedcodes).replace("'", "").strip("[]")[::-1].replace(",", " and"[::-1], 1)[::-1]
             print(f"With the following codes enabled: {outputstr}")
         print("(Start play)")
         sleep(1)
@@ -53,7 +49,7 @@ Options:
         print("\nInvalid choice")
         sleep(1)
     elif usrinput == "4":
-        usrinput = input("\nInput Code\n>").capitalize()
+        usrinput = input("\nInput Code\n>").lower().capitalize()
         sleep(1)
         if usrinput in codes:
             usedcodes.append(usrinput) 
